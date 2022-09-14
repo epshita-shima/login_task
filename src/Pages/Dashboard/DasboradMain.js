@@ -5,8 +5,8 @@ import DashboardHeader from './DashboardHeader'
 const DasboradMain = () => {
   return (
     <div className='w-full pt-10'>
-        <DashboardHeader></DashboardHeader>
-        <Dashboard></Dashboard>
+        {/* <DashboardHeader></DashboardHeader>
+        <Dashboard></Dashboard> */}
     </div>
   )
 }

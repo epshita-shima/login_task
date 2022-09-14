@@ -19,15 +19,14 @@ const Dashboard = () => {
         {/* <!-- Sidebar content here --> */}
         <li><Link to='/dashboard'>Dashboard</Link></li>
                     <li><Link to='/dashboard'>My Orders</Link></li>
-                    <li className='relative '><Link to='/dashboard/dasreview'>Review</Link>
-                    <ul className='relative w-[100%]'>
+                    <li className='relative'><Link to='/dashboard/dasreview'>Review</Link>
+                    <ul className='absolute w-[100%] left-[40%] overflow-hidden mt-4'>
                         <li className='p-[8px 16px] float-left w-auto border-none block outline-none'><Link to='/dashboard/dash'></Link>Item 1</li>
                         <li className='p-[8px 16px] float-left w-auto border-none block outline-none'><Link to='/dashboard/dash'></Link>Item 1</li>
                     </ul>
                     </li>
                     <li><Link to='/dashboard/dasprofile'>My Profile</Link></li>
       </ul>
-    
     </div>
   </div>
   )
