@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPassword = () => {
@@ -7,7 +6,7 @@ const LoginPassword = () => {
     const handleLogin=(event)=>{
         event.preventDefault();
      localStorage.setItem("dashboardFlag",0);
-    
+    window.alert('successfully login')
         navigate('/dashboard')
     }
   return (
@@ -21,7 +20,7 @@ const LoginPassword = () => {
       <form onSubmit={handleLogin}>
       <div>
             <label htmlFor="" className='text-zinc-600 text-[16px] ml-2'>Username</label>
-            <input type="text" placeholder='Enter username' class="p-3 outline-none  rounded-full w-full bg-slate-50 mt-2" />
+            <input type="text" placeholder='Enter username' required class="p-3 outline-none  rounded-full w-full bg-slate-50 mt-2" />
            </div>
             
       <div className='mt-4'>

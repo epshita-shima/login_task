@@ -12,9 +12,12 @@
     padding: 10px;
 }
 .side-nav-show:hover{
-    background-color: rgb(255, 255, 255,0.2);
+    background-color: #0265A3;
     border-radius: 30%;
 }
 .side-nav-show .sidebar-control{
     width: 100px;
+}
+.profile-logo{
+    width: 250px;
 }

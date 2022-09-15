@@ -16,6 +16,7 @@ const ModalOpen = () => {
     // localStorage.setItem("confirmpass",JSON.stringify(confirmPass));
     // console.log(localStorage.getItem('confirmpass'));
     event.target.reset();
+    window.alert('successfully changed password')
     nevigate('/');
   }
   return (

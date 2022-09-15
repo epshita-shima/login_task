@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
   // const confirmPass=localStorage.getItem('confirmpass');
@@ -9,8 +8,9 @@ const Login = () => {
     const handleLogin=(event)=>{
         event.preventDefault();
      localStorage.setItem("dashboardFlag",1);
-    
+   
         navigate('/dashboard')
+        window.alert('login successfull')
     }
   
   return (
@@ -27,11 +27,11 @@ const Login = () => {
            
           <div className='mt-4'>
               <label htmlFor="" className='text-zinc-600 text-[16px] ml-2'>Password</label> 
-              <input type="password" placeholder='Enter password' class="p-3 outline-none rounded-full border-black w-full bg-slate-50 mt-2" />
+              <input type="password" placeholder='Enter password' required class="p-3 outline-none rounded-full border-black w-full bg-slate-50 mt-2" />
           </div>
           <button><p className='text-zinc-600 mt-2 ml-2'>Forgot password?</p></button>
           <div className='text-center'>
-              <input type="submit"  value="Login" className='p-3 font-bold text-zinc-800 outline-none border-black rounded-full w-2/3 bg-slate-50 mt-4 hover:bg-[#B88F31] hover:text-white' />
+              <input type="submit"  value="Login"  className='p-3 font-bold text-zinc-800 outline-none border-black rounded-full w-2/3 bg-slate-50 mt-4 hover:bg-[#B88F31] hover:text-white' />
           </div>
           </form>
           </div> 
