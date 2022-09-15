@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faChevronDown, faRefresh } from "@fortawesome/free-solid-svg-icons";
 const Sidebar = () => {
   return (
-    <sec tion id="side-nav" className="">
+    <section tion id="side-nav" className="">
       <div className="side-nav-content">
       <a className="navbar-brand text-light fw-bold icon-refresh-style " href="#"  >
          <FontAwesomeIcon icon={faRefresh}></FontAwesomeIcon> <span className="icon-refresh">Refresh</span>
@@ -63,7 +63,7 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
-    </sec>
+    </section>
   );
 };
 

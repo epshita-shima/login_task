@@ -14,7 +14,7 @@ const Header = () => {
             href="#collapseExample2"
             role="button"
             aria-expanded="false"
-            aria-controls="collapseExample"
+            aria-controls="collapseExample2"
             className="side-nav-show"
           >
             <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>

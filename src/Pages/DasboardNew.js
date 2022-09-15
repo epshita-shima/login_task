@@ -6,29 +6,32 @@ import ModalOpen from "../component/ModalOpen";
 const DashboardNew = () => {
   const [navOpen, setNavOpen] = useState(true);
   const [popOpen, setPopOpen]=useState(false)
-
-
+  const dashboardFlag=localStorage.getItem('dashboardFlag')
+console.log('dashboard')
   // const [removeBlur, setRemoveBlur]=useState(true)
   // useEffect(()=>{
   //  const blur= document.body.className="main-screen-blur: filter[0px]";
   // //   setRemoveBlur(!removeBlur)
   // },[])
 
-  useEffect(() => {
-    setTimeout(() => {
-      setNavOpen(!navOpen);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setNavOpen(!navOpen);
+  //   }, 1000);
+  // }, []);
 
   useEffect(()=>{
     setPopOpen(!navOpen)
-  },[])
+  },[]);
+
+  const [open, setIsOpen] = useState(false);
+  const openForm = () => setIsOpen(true);
 
   return (
     <div className="w-full">
-      <div className="h-screen flex flex-col items-center justify-center transition ease-in-out delay-500  popup-screen">
-      <button class={`alert mx-auto flex flex-col items-center justify-center container w-1/3 alert-error shadow-lg absolute top-[50%] ${!popOpen ? "openPop" : 'hidden'}`}>
-          <div className=" ">
+      <div className={`h-screen flex flex-col items-center justify-center transition ease-in-out delay-500  popup-screen ${dashboardFlag == 0 ? "popup-screen" : "hidden"}`}>
+      {/* <button onClick= {openForm} class={` mx-auto flex flex-col items-center justify-center container w-1/3  shadow-lg absolute top-[50%`}> */}
+          {/* <div className=" ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -42,15 +45,20 @@ const DashboardNew = () => {
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               ></path>
             </svg>
-            <span>To see the change password form, please relaod</span>
-          </div>
-        </button>
-        <div className={`relative ${navOpen ? "popup-box" : "hidden bg-red-600 p-4"}`}>
+          </div> */}           
+        {/* </button> */}
+      {
+        dashboardFlag ==0 ?
+       <div>
+        <ModalOpen></ModalOpen>
+        </div> : ''
+      }
+
+        {/* <div className={`relative ${navOpen ? "popup-box" : "hidden bg-red-600 p-4"}`}>
           <ModalOpen></ModalOpen>
-        </div>
-       
+        </div> */}
       </div>
-      <div className="main-screen">
+      <div className=''>
         <div>
           <div id="#content">
             <Header></Header>
