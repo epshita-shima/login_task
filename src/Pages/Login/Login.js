@@ -1,25 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 const Login = () => {
-  // const confirmPass=localStorage.getItem('confirmpass');
-  // console.log("login confirm pass",confirmPass);
   const navigate=useNavigate()
     const handleLogin=(event)=>{
         event.preventDefault();
-     localStorage.setItem("dashboardFlag",1);
-   
-        navigate('/dashboard')
-        window.alert('login successfull')
+        localStorage.setItem("dashboardFlag",1);
+       
+        swal({
+          title: "Login successfull",
+          icon: "success",
+          button: "OK",
+        }) .then(()=>{
+          navigate('/dashboard')
+        });
     }
   
   return (
-    <div className='pt-6'>
-      
+    <div className='pt-6'>     
          <div className='container sm:w-full lg:w-1/2 mx-auto bg-gradient-to-r from-cyan-100 to-blue-300  h-[550px] mb-10'> 
         <div className=''>
         <div className='pt-8'>
-              {/* <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" className='w-24 h-24 mx-auto' alt="" /> */}
               <img src="https://i.ibb.co/3NtTMqz/tlogo.png" className='w-28 h-28 mx-auto' alt="" />
           </div>
           <div className='w-2/3 mx-auto mt-6'>

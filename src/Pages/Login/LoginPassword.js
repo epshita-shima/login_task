@@ -6,8 +6,9 @@ const LoginPassword = () => {
     const handleLogin=(event)=>{
         event.preventDefault();
      localStorage.setItem("dashboardFlag",0);
-    window.alert('successfully login')
-        navigate('/dashboard')
+     
+      navigate('/dashboard')
+    
     }
   return (
     <div className='pt-6'>

@@ -6,9 +6,16 @@ import Sidebar from "../Sidebar/Sidebar";
 import ModalOpen from "../ModalOpen";
 
 const Header = () => {
+  // const [openSide, setIsOpenSide] = useState(false);
+  // const openSideBar = () => setIsOpen(!openSide);
+    const [isOpen, setIsopen] = useState(false);
+
+    const ToggleSidebar = () => {
+        isOpen === true ? setIsopen(false) : setIsopen(true);
+    }
   return (
     <section>
-      <nav className="navbar navbar-expand navbar-dark bg-[#0265A3] px-2">
+      <nav className="navbar navbar-expand navbar-dark nav-bar bg-blue-300 px-2">
         <div className="side-nav-btn p-2 me-3">
           <a
             data-bs-toggle="collapse"
@@ -17,6 +24,8 @@ const Header = () => {
             aria-expanded="false"
             aria-controls="collapseExample2"
             className="side-nav-show"
+           onClick={ToggleSidebar}
+           
           >
             <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
           </a>
@@ -25,7 +34,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="navbar-collapse">
+        {/* <div className="navbar-collapse">
           <ul className="navbar-nav me-auto">
             <li className="nav-item dropdown">
               <a
@@ -38,27 +47,16 @@ const Header = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <div className=" dropdown">
           <button
-            className="btn bg-transparent border-white hover:text-white dropdown-toggle"
+            className="btn bg-transparent border-[#581C87] text-[#581C87] dropdown-toggle"
             data-bs-toggle="dropdown"
           >
             Change password
           </button>
           <ul className="dropdown-menu profile-logo">
-            {/* <li>
-              <a href="#" className="dropdown-item">
-                Your Profile
-              </a>
-            </li>
-            <li>
-              <a href="#" className="dropdown-item">
-                Log Out
-              </a>
-            </li> */}
-
             <ModalOpen></ModalOpen>
           </ul>
         </div>

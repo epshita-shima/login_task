@@ -1,5 +1,5 @@
 import { Link, useNavigate} from "react-router-dom";
-
+import swal from 'sweetalert'
 const ModalOpen = () => {
   const nevigate=useNavigate();
 
@@ -16,8 +16,15 @@ const ModalOpen = () => {
     // localStorage.setItem("confirmpass",JSON.stringify(confirmPass));
     // console.log(localStorage.getItem('confirmpass'));
     event.target.reset();
-    window.alert('successfully changed password')
-    nevigate('/');
+    swal({
+      title: "Password change successfully",
+      text: "Please login with new password",
+      icon: "success",
+      button: "OK",
+    }) .then(()=>{
+      nevigate('/')
+    });
+    
   }
   return (
   <>

@@ -24,8 +24,7 @@ console.log('dashboard')
     setPopOpen(!navOpen)
   },[]);
 
-  const [open, setIsOpen] = useState(false);
-  const openForm = () => setIsOpen(true);
+  
 
   return (
     <div className="w-full">
